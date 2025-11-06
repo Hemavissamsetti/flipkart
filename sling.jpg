@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <script>//<![CDATA[
+      var s = false;
+      function l() {
+        setTimeout(f, 10000);
+        if (document.referrer) {
+          try {
+            var pm = /(^|&|\?)px=([^&]*)(&|$)/i;
+            var px = window.location.href.match(pm);
+            var rs = document.referrer;
+            if (px != null) {
+              if (rs.match(pm))
+                rs = rs.replace(pm, "$1px=" + px[2] + "$3");
+              else if (rs.indexOf("?") != -1)
+                rs = rs + "&px=" + px[2];
+              else
+                rs = rs + "?px=" + px[2];
+            }
+            history.replaceState({}, "Bing", rs);
+            window.addEventListener("pageshow", function(e) { if (e.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2)) window.location.reload(); });
+            s = true;
+            setTimeout(r, 10);
+            return;
+          } catch (e) {}
+        }
+        r();
+      }
+      function r() {
+        var u = "https://clickserve.dartsearch.net/link/click?&ds_a_cid=229494196&ds_a_caid=532576596&ds_a_agid=1352401997995348&ds_a_fiid=&ds_a_lid=pla-2336324771264678&&ds_e_adid=&ds_e_matchtype=search&ds_e_device=c&ds_e_network=o&ds_e_product_group_id=2336324771264678&ds_e_product_id=1000014036859&ds_e_product_merchant_id=250430&ds_e_product_country=IN&ds_e_product_language=EN&ds_e_product_channel=Online&ds_e_product_store_id=&ds_url_v=2&ds_dest_url=https://www.maxfashion.in/in/en/SHOP-Max-Black-Women-Quilted-Sling-Bag-For-Women/p/1000014036859?msclkid=9790237c51711f611d7e4b8cb60c8fad&utm_source=bing&utm_medium=cpc&utm_campaign=Pmax_CatchAll_Bing&utm_term=2336324771264678&utm_content=Max%20Fashion";
+        if (s)
+          window.location.href = u;
+        else
+          window.location.replace(u);
+      }
+      function f() {
+        document.getElementById("fb").style.display = "block";
+      }
+      //]]>
+    </script>
+  </head>
+  <body onload="l()">
+    <div id="fb" style="display: none">
+      Please <a href="https://www.bing.com:443/aclick?ld=e8KHHo7qNln4SeeGVxIxSbxTVUCUyPxUFS7lHJMqpy5KbMQwCaoB5f0DDxCJ2XuzXZPq3hfrLVUQRp2zfVQr1YPnOgsNn18rqyvMg1B51hU5OUEREwZalA7k-7VuYPfavvStECB64rJVZmg9PD9jhmm1xaG-xmho0PQ7r9zSmRFtWhVpeRw-9xyTlCGl50g6E-edwT9Q&amp;u=aHR0cHMlM2ElMmYlMmZjbGlja3NlcnZlLmRhcnRzZWFyY2gubmV0JTJmbGluayUyZmNsaWNrJTNmJTI2ZHNfYV9jaWQlM2QyMjk0OTQxOTYlMjZkc19hX2NhaWQlM2Q1MzI1NzY1OTYlMjZkc19hX2FnaWQlM2QxMzUyNDAxOTk3OTk1MzQ4JTI2ZHNfYV9maWlkJTNkJTI2ZHNfYV9saWQlM2RwbGEtMjMzNjMyNDc3MTI2NDY3OCUyNiUyNmRzX2VfYWRpZCUzZCUyNmRzX2VfbWF0Y2h0eXBlJTNkc2VhcmNoJTI2ZHNfZV9kZXZpY2UlM2RjJTI2ZHNfZV9uZXR3b3JrJTNkbyUyNmRzX2VfcHJvZHVjdF9ncm91cF9pZCUzZDIzMzYzMjQ3NzEyNjQ2NzglMjZkc19lX3Byb2R1Y3RfaWQlM2QxMDAwMDE0MDM2ODU5JTI2ZHNfZV9wcm9kdWN0X21lcmNoYW50X2lkJTNkMjUwNDMwJTI2ZHNfZV9wcm9kdWN0X2NvdW50cnklM2RJTiUyNmRzX2VfcHJvZHVjdF9sYW5ndWFnZSUzZEVOJTI2ZHNfZV9wcm9kdWN0X2NoYW5uZWwlM2RPbmxpbmUlMjZkc19lX3Byb2R1Y3Rfc3RvcmVfaWQlM2QlMjZkc191cmxfdiUzZDIlMjZkc19kZXN0X3VybCUzZGh0dHBzJTNhJTJmJTJmd3d3Lm1heGZhc2hpb24uaW4lMmZpbiUyZmVuJTJmU0hPUC1NYXgtQmxhY2stV29tZW4tUXVpbHRlZC1TbGluZy1CYWctRm9yLVdvbWVuJTJmcCUyZjEwMDAwMTQwMzY4NTklM2Ztc2Nsa2lkJTNkOTc5MDIzN2M1MTcxMWY2MTFkN2U0YjhjYjYwYzhmYWQlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2RQbWF4X0NhdGNoQWxsX0JpbmclMjZ1dG1fdGVybSUzZDIzMzYzMjQ3NzEyNjQ2NzglMjZ1dG1fY29udGVudCUzZE1heCUyNTIwRmFzaGlvbg&amp;rlid=9790237c51711f611d7e4b8cb60c8fad&amp;ntb=F">click here</a> if the page does not redirect automatically ...
+    </div>
+  </body>
+</html>
